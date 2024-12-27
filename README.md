@@ -1,3 +1,7 @@
+# Todo List App - React
+
+This project is a Todo List application built using React. It includes task management functionalities such as adding, editing, deleting tasks, and toggling task completion. Additionally, the app supports a dark mode and task filtering (All, Completed, Pending).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
