@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.dark-mode {
+  background-color: #2e2e2e;
+  color: #ffffff !important;
+}
+
+.app.dark-mode {
+  background: #444444;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode-toggle {
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+.dark-mode-toggle:hover {
+  background:none;
+}
+.dark-mode-toggle .fa-sun{
+  color: white;
+}
+
+.app {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
+  flex: 1;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #e0e0e0;
+}
+
+.task-list li .category,
+.task-list li .priority,
+.task-list li .due-date {
+  font-size: 12px;
+  color: #666;
+  margin-left: 10px;
+}
+
+.task-list li button {
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #ff4d4d;
+}
+
+.task-list li button:hover {
+  background-color: #d93636;
+}
+
+.clear-completed {
+  background-color: #dc3545;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.clear-completed:hover {
+  background-color: #c82333;
+}
+
+body.dark-mode .task-list li {
+  background-color: #444444;
+  color: #fff;
+}
+
+body.dark-mode .task-list li.completed {
+  background-color: #888888;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .input-container {
+    flex-direction: column;
+  }
+
+  input, select {
+    margin: 5px 0;
+  }
+
+
+
+  .task-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-list li .category,
+  .task-list li .priority,
+  .task-list li .due-date {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .task-list li button {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .input-container {
+    gap: 5px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+  }
+
+  .task-list li {
+    padding: 8px;
+  }
+
+  .clear-completed {
+    padding: 8px 15px;
+  }
+}
